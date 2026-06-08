@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harlan's Gardens — Jay Papandreas</title>
+  <meta name="description" content="Designing a conversion-first website and custom booking system for a one-person landscaping business launching from zero.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .cs-hero { background: #1a2e1a; color: #f5f0e8; }
+    .cs-label { color: #7fb87f; }
+    .cs-title, .cs-subtitle { color: #f5f0e8; }
+    .meta-label { color: #7fb87f; }
+    .meta-value { color: #f5f0e8; font-weight: 500; }
+    .tldr { background: #f5f0e8; padding: 32px 36px; gap: 0 24px; }
+    .tldr-item { padding: 16px 0 0; gap: 8px; border-top: 3px solid #84422a; }
+    .tldr-label { color: #3d6b3d; }
+    .tldr-body { color: #4a4a4a; }
+    .cs-screen-caption { color: rgba(245,240,232,0.5); }
+    .meta-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    /* Content area */
+    .pg-harlans .cs-content { background: #faf8f4; }
+    .pg-harlans .cs-section-num { color: #4a7c4a; }
+    .pg-harlans .callout-block { background: #1a2e1a; border-left: 4px solid #c8a96e; }
+    .pg-harlans .callout-label { color: #7fb87f; }
+    .pg-harlans .callout-text { color: #f5f0e8; }
+    .pg-harlans .callout-quote { color: #f5f0e8; }
+    .pg-harlans .insight-grid { grid-template-columns: repeat(3, 1fr); }
+    .pg-harlans .insight-card { background: #f5f0e8; border: none; border-top: 3px solid #4a7c4a; }
+    .pg-harlans .insight-name { color: #1a2e1a; }
+    .pg-harlans .insight-desc { color: #1a2e1a; }
+    .pg-harlans .tech-chip { background: #1a2e1a; color: #f5f0e8; border-color: #1a2e1a; }
+    .pg-harlans .tech-arrow { color: #c8a96e; }
+    .pg-harlans .outcome-block { background: #1a2e1a; border: none; color: #f5f0e8; }
+    .pg-harlans .outcome-highlight { color: #c8a96e; }
+    .pg-harlans .outcome-block .cs-body { color: #f5f0e8; }
+    .pg-harlans .outcome-block .callout-block { background: rgba(245,240,232,0.08); border-left-color: rgba(200,169,110,0.4); }
+    .pg-harlans .outcome-block .callout-quote { color: #f5f0e8; }
+    @media (max-width: 900px) {
+      .tldr { padding: 20px 32px; gap: 1px; }
+      .tldr-item { padding: 16px 0; border-top: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-wordmark">Jay Papandreas</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pg-harlans" id="main">
+    <div class="cs-hero">
+      <div class="cs-hero-inner">
+        <span class="cs-label">Case Study</span>
+        <h1 class="cs-title">Harlan's Gardens: From passion project to booked-out business</h1>
+        <p class="cs-subtitle">Designing a conversion-first website and custom booking system for a one-person landscaping business launching from zero.</p>
+        <div class="meta-row">
+          <div class="meta-item">
+            <span class="meta-label">Client</span>
+            <span class="meta-value">Harlan's Gardens, Denver CO</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Timeline</span>
+            <span class="meta-value">1 week build, live April 2026</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">My Role</span>
+            <span class="meta-value">End-to-end design &amp; development</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Live Site</span>
+            <a class="meta-value meta-link" href="https://harlansgardens.com/" target="_blank" rel="noopener noreferrer" aria-label="Harlan's Gardens website (opens in new tab)">harlansgardens.com ↗</a>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Tools</span>
+            <span class="meta-value">Figma, Claude Code, Google Sheets</span>
+          </div>
+        </div>
+        <div class="tldr">
+          <div class="tldr-item">
+            <span class="tldr-label">Problem</span>
+            <p class="tldr-body">A new landscaping business needed to look credible and start capturing leads immediately with no web presence, no brand, and no budget for paid tools.</p>
+          </div>
+          <div class="tldr-item">
+            <span class="tldr-label">Approach</span>
+            <p class="tldr-body">Designed a conversion-first site and built a custom booking system using Claude Code, routing submissions directly into Google Sheets so Harlan could manage leads from day one.</p>
+          </div>
+          <div class="tldr-item">
+            <span class="tldr-label">Outcome</span>
+            <p class="tldr-body">10 bookings in the first month, all through the website. Zero prior web presence, zero paid advertising.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-hero-wide">
+        <img src="images/portfolio%20assets/Harlan%20picture.png" alt="Harlan of Harlan's Gardens">
+      </div>
+    </div>
+
+    <div class="cs-content">
+      <section class="cs-section">
+        <span class="cs-section-num">01 &mdash;&mdash; Brief &amp; Diagnosis</span>
+        <h2 class="cs-section-h2">More than a website: a lead capture system from scratch</h2>
+        <p class="cs-body">Harlan left a career as an event coordinator to launch a full-time residential landscaping business in Denver. No web presence, no brand, no system for managing work. The goal wasn't to build something pretty, it was to get Harlan's first paying customers.</p>
+
+        <div class="callout-block">
+          <span class="callout-label">The Brief</span>
+          <p class="callout-quote">"I need people to find me, trust me, and book a consultation without me having to chase them down."</p>
+        </div>
+
+        <p class="cs-body">My prior work in web design for contractors shaped the diagnosis immediately. Small business websites fail not because they look bad, but because they're built as brochures. I knew what makes homeowners actually hire someone they've never met.</p>
+
+        <div class="insight-grid">
+          <div class="insight-card">
+            <p class="insight-name">Trust through visibility</p>
+            <p class="insight-desc">A face, a name, and a story matter more than a logo when a stranger is coming to your home.</p>
+          </div>
+          <div class="insight-card">
+            <p class="insight-name">Proof of work</p>
+            <p class="insight-desc">Photos of real projects reduce perceived risk faster than any copy could.</p>
+          </div>
+          <div class="insight-card">
+            <p class="insight-name">Frictionless next step</p>
+            <p class="insight-desc">The booking CTA needed to be impossible to miss. Every extra click is a lost lead.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <span class="cs-section-num">02 &mdash;&mdash; The Design</span>
+        <h2 class="cs-section-h2">Key decisions in the build</h2>
+        <p class="cs-body">Every choice was made against one constraint: a solo operator launching a business needs to convert visitors, not win design awards.</p>
+
+        <div class="decision-list">
+          <div class="decision-item">
+            <span class="decision-arrow">→</span>
+            <span>Mobile-first. Homeowners search for contractors on their phones, often while standing in the space they want changed.</span>
+          </div>
+          <div class="decision-item">
+            <span class="decision-arrow">→</span>
+            <span>Harlan front and center. Hero leads with a photo and a direct statement about who you're hiring and the quality of their work.</span>
+          </div>
+          <div class="decision-item">
+            <span class="decision-arrow">→</span>
+            <span>Work photos early. Project photography above the fold does more conversion work than any copy.</span>
+          </div>
+          <div class="decision-item">
+            <span class="decision-arrow">→</span>
+            <span>One CTA, repeated. "Book a Consultation" appears multiple times. No ambiguity about the next step.</span>
+          </div>
+        </div>
+
+        <div class="img-two-col">
+          <div>
+            <img src="images/portfolio%20assets/hg%20wireframe%20screen%201.png" alt="First wireframe sketch">
+            <p class="img-caption">Wireframe</p>
+          </div>
+          <div>
+            <img src="images/portfolio%20assets/hg%20finished%20screenshot%201.png" alt="Screenshot of the finished product">
+            <p class="img-caption">Finished product</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <span class="cs-section-num">03 &mdash;&mdash; The Booking System</span>
+        <h2 class="cs-section-h2">Where design met engineering</h2>
+        <p class="cs-body">The most important problem wasn't visual, it was operational. Paid tools like Calendly add cost and impose their own UX on a fledgling business that needs custom forms. I needed a lightweight, zero-cost system that Harlan could manage without me. So I built one.</p>
+        <p class="cs-body">I used Claude Code — an AI coding tool I'd been learning — to build a custom booking form that pipes submissions directly into Google Sheets. What would have taken a week of back-and-forth with a developer took two days. I designed it, built it, and shipped it myself.</p>
+
+        <div class="callout-block">
+          <span class="callout-label">How it works</span>
+          <div class="tech-flow mt-sm">
+            <span class="tech-chip">Customer fills form</span>
+            <span class="tech-arrow">→</span>
+            <span class="tech-chip">Submission fires</span>
+            <span class="tech-arrow">→</span>
+            <span class="tech-chip">Row added to Google Sheet</span>
+            <span class="tech-arrow">→</span>
+            <span class="tech-chip">Harlan follows up</span>
+          </div>
+        </div>
+
+        <p class="cs-body">Fields: consultation type, preferred time, address, phone, optional job notes. Short enough to complete, detailed enough to prepare.</p>
+
+        <div class="img-two-col">
+          <div>
+            <img src="images/portfolio%20assets/Custom%20Form.png" alt="Screenshot of the custom booking form">
+            <p class="img-caption">Our custom form</p>
+          </div>
+          <div>
+            <img src="images/portfolio%20assets/harlan%20google%20sheet.png" alt="The Google Sheet">
+            <p class="img-caption">The Google Sheet: simple, but easily customized to accommodate Harlan's needs</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <span class="cs-section-num">04 &mdash;&mdash; Outcome</span>
+        <h2 class="cs-section-h2">One month in</h2>
+
+        <div class="outcome-block">
+          <p class="outcome-highlight">Real bookings. No prior presence. No paid ads.</p>
+          <p class="cs-body">10 bookings in the first month, all through the website. Zero prior web presence, zero paid advertising. The Google Sheets pipeline worked without issues from day one. A post-launch suggestion from a third party prompted an active iteration: removing the notes field to reduce friction.</p>
+          <div class="callout-block mt-md">
+            <p class="callout-quote">"I'm ecstatic about how easy this is. You thought about making my workflow simple before I did."<br><br>— Harlan, Harlan's Gardens</p>
+          </div>
+          <p class="cs-body mb-0">The thing I'm most proud of: the Claude Code decision. A developer would have added cost and a handoff. I took it on myself, learned a new tool under real pressure, and shipped on time. That's the version of this project that only happens if you're willing to figure things out as you go.</p>
+        </div>
+
+        <div class="img-block">
+          <img src="images/portfolio%20assets/harlan%20flowerboxes%201.png" alt="Harlan's Gardens outcome">
+        </div>
+      </section>
+
+      <nav class="cs-pagination">
+        <a href="provisioned.html" class="cs-pag-link cs-pag-link--prev">
+          <span class="cs-pag-label">← Previous</span>
+          <span class="cs-pag-title">Provisioned</span>
+        </a>
+        <a href="lastfm.html" class="cs-pag-link cs-pag-link--next">
+          <span class="cs-pag-label">Next →</span>
+          <span class="cs-pag-title">Last.fm</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-name">Jay Papandreas</span>
+        <span class="footer-meta">Denver, CO · 2026</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a data-e="jay.papandreas" data-d="gmail.com" class="footer-link" role="link" tabindex="0">Email</a>
+        <a href="https://www.linkedin.com/in/jaypapandreas" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="LinkedIn (opens in new tab)">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

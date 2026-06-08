@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Last.fm — Jay Papandreas</title>
+  <meta name="description" content="Redesigning a dormant music platform to surface the community that was already there, hiding in plain sight.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .cs-hero { background: #111111; color: #fff; }
+    .cs-label { color: #fff; }
+    .cs-divider { background: rgba(255,255,255,0.08); }
+    .meta-label { color: #fff; }
+    .meta-value { color: rgba(255,255,255,0.85); }
+    .tldr { background: rgba(255,255,255,0.06); }
+    .tldr-item { background: rgba(255,255,255,0.04); }
+    .tldr-label { color: #fff; }
+    .tldr-body { color: rgba(255,255,255,0.85); }
+    .cs-screen-caption { color: rgba(255,255,255,0.7); }
+    /* Content area */
+    .pg-lastfm .cs-section-num { color: #d51007; }
+    .pg-lastfm .callout-block { background: #111111; border-left-color: #d51007; }
+    .pg-lastfm .callout-label { color: #d51007; }
+    .pg-lastfm .callout-text { color: rgba(255,255,255,0.85); }
+    .pg-lastfm .stats-grid { background: rgba(17,17,17,0.06); border: none; gap: 2px; }
+    .pg-lastfm .stat-card { background: #ececec; border: none; border-right: 1px solid rgba(17,17,17,0.1); }
+    .pg-lastfm .stat-number { color: #d51007; }
+    .pg-lastfm .stat-label { color: #111111; }
+    .pg-lastfm .comp-table { background: rgba(17,17,17,0.06); border: none; }
+    .pg-lastfm .comp-table th { background: #111111; color: rgba(255,255,255,0.5); border-color: rgba(255,255,255,0.12); }
+    .pg-lastfm .comp-table td { background: #ececec; color: #111111; border-color: rgba(17,17,17,0.1); }
+    .pg-lastfm .feature-badge { background: #d51007; color: #fff; border-color: #d51007; }
+    .pg-lastfm .test-grid { background: rgba(17,17,17,0.06); gap: 2px; }
+    .pg-lastfm .test-card { background: #ececec; border: none; }
+    .pg-lastfm .test-label { color: #777777; }
+    .pg-lastfm .outcome-block { background: #111111; border: none; color: #fff; }
+    .pg-lastfm .outcome-highlight { color: #d51007; }
+    .pg-lastfm .outcome-block .cs-body { color: rgba(255,255,255,0.85); }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-wordmark">Jay Papandreas</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pg-lastfm" id="main">
+    <div class="cs-hero">
+      <div class="cs-hero-inner">
+        <span class="cs-label">Case Study</span>
+        <h1 class="cs-title">Last.fm: The social network you forgot you had</h1>
+        <p class="cs-subtitle">Redesigning a dormant music platform to surface the community that was already there, hiding in plain sight.</p>
+        <div class="cs-divider"></div>
+        <div class="meta-row">
+          <div class="meta-item">
+            <span class="meta-label">Project Type</span>
+            <span class="meta-value">Designlab Capstone</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Platform</span>
+            <span class="meta-value">iOS Mobile App</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">My Role</span>
+            <span class="meta-value">End-to-end UX &amp; UI Design</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Research</span>
+            <span class="meta-value">Survey · Interviews · Usability Testing</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Tools</span>
+            <span class="meta-value">Figma, Adobe Creative Suite</span>
+          </div>
+        </div>
+        <div class="tldr">
+          <div class="tldr-item">
+            <span class="tldr-label">Problem</span>
+            <p class="tldr-body">Last.fm's mobile app shows users what they already know — their recent listening history. The platform's social layer is buried on desktop and completely absent on mobile.</p>
+          </div>
+          <div class="tldr-item">
+            <span class="tldr-label">Approach</span>
+            <p class="tldr-body">Redesigned the mobile experience to surface a community social feed built entirely from data Last.fm already collects — no new data, no streaming, no rebrand.</p>
+          </div>
+          <div class="tldr-item">
+            <span class="tldr-label">Outcome</span>
+            <p class="tldr-body">Validated through two rounds of usability testing with current Last.fm users. High-fidelity prototype rated as immediately plausible and desirable.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-hero-screens">
+        <div class="cs-hero-screen">
+          <img src="images/portfolio%20assets/lastfm%20today.png" alt="Last.fm as it appears today">
+          <span class="cs-screen-caption">Last.fm as it appears today</span>
+        </div>
+        <div class="cs-hero-screen">
+          <img src="images/portfolio%20assets/revised%20feed.png" alt="My revised Friends Feed">
+          <span class="cs-screen-caption">My revised Friends Feed</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-content">
+      <section class="cs-section">
+        <span class="cs-section-num">01 &mdash;&mdash; Problem &amp; Research</span>
+        <h2 class="cs-section-h2">A social network that forgot it was social</h2>
+        <p class="cs-body">Last.fm was a Designlab UX Academy capstone. The brief: pick a platform with a real, existing problem and redesign it. I chose Last.fm.</p>
+        <p class="cs-body">Last.fm spent years building something rare: a platform that knew what you listened to, what your friends listened to, and where those overlapped. In 2026, none of that is visible on mobile. The app shows listeners their recent scrobbles (logged plays) and listening data. The social infrastructure exists in the backend, but it's not visible on the app.</p>
+
+        <div class="callout-block">
+          <p class="callout-text">The cool thing about this project: I didn't have to invent anything. Every feature is built from data Last.fm already collects and connections users have already made.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">20</span>
+            <span class="stat-label">Survey Respondents</span>
+            <p class="stat-desc">Current Last.fm users — habits, frustrations, feature awareness.</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">5</span>
+            <span class="stat-label">In-Depth Interviews</span>
+            <p class="stat-desc">Deeper conversations on music habits and social behavior.</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Competitors Analyzed</span>
+            <p class="stat-desc">Spotify, Airbuds, Music League. All unique, but each missing something different.</p>
+          </div>
+        </div>
+
+        <div class="callout-block">
+          <span class="callout-label">Key Finding</span>
+          <p class="callout-text">Every person surveyed said listening to music is social. But only 3 of 20 knew Last.fm had social features at all. The social layer wasn't just underused — it was invisible to the platform's own users.</p>
+        </div>
+
+        <div class="img-two-col">
+          <div>
+            <img src="images/portfolio%20assets/Mid-Fidelity%20Wireframe.png" alt="Mid-fidelity wireframe">
+            <p class="img-caption">Mid-fidelity Wireframe</p>
+          </div>
+          <div>
+            <img src="images/portfolio%20assets/High%20Fidelity%20Wireframe.png" alt="High-fidelity wireframe">
+            <p class="img-caption">High-fidelity Wireframe</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <span class="cs-section-num">02 &mdash;&mdash; Competitive Analysis &amp; Design</span>
+        <h2 class="cs-section-h2">What everyone's missing and what I built instead</h2>
+
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>What It Does</th>
+              <th>The Gap</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Spotify</td>
+              <td>Friend activity feed, collaborative playlists.</td>
+              <td>Shows what friends listen to — not what you have in common.</td>
+            </tr>
+            <tr>
+              <td>Airbuds</td>
+              <td>Real-time "what are friends listening to" feed.</td>
+              <td>Built for college campuses. Doesn't scale geographically.</td>
+            </tr>
+            <tr>
+              <td>Music League</td>
+              <td>Social game where friends rank songs around themes.</td>
+              <td>Game mechanics only. No tie to actual listening behavior.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="cs-body">None use listening data to facilitate genuine connection — and this isn't a capability gap. Spotify has the data but is primarily a distribution platform; social is a side feature, not the core bet. Airbuds is built around physical proximity, not listening history. Music League is a game that exists independently of what you actually listen to. Each made a deliberate product decision to stop short of using what they know about you to connect you to other people. Last.fm had that data and was doing nothing with it. The redesign replaces the scrobbles home screen with a social feed built entirely from what's already there.</p>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="feature-badge">01</span>
+            <div class="feature-content">
+              <span class="feature-name">Community feed</span>
+              <p class="feature-desc">Albums gaining traction in your friend group by tag overlap — real behavior, not an algorithm.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-badge">02</span>
+            <div class="feature-content">
+              <span class="feature-name">Taste match suggestions</span>
+              <p class="feature-desc">Albums recommended by tag overlap between your history and your friends'. More trusted than streaming recs because they come from real people.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-badge">03</span>
+            <div class="feature-content">
+              <span class="feature-name">Obsessions</span>
+              <p class="feature-desc">Last.fm already has this — a favorited track on your profile. This redesign surfaces it in the feed like a status update.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-badge">04</span>
+            <div class="feature-content">
+              <span class="feature-name">Concert feed</span>
+              <p class="feature-desc">Upcoming shows near you filtered by what you and your friends actually listen to — a bridge from the app to real life.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="img-block">
+          <img src="images/portfolio%20assets/lastfm%20feature%201.png" alt="Updated Friends Feed">
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <span class="cs-section-num">03 &mdash;&mdash; Usability Testing</span>
+        <h2 class="cs-section-h2">Two rounds. Real Last.fm users both times.</h2>
+        <p class="cs-body">Strongest responses: Obsessions, the concert feed, and taste match suggestions — all of these trusted more than streaming recommendations because they came from visible data and real friends.</p>
+
+        <div class="img-two-col">
+          <div>
+            <img src="images/portfolio%20assets/Obsession%20image.png" alt="An example of an Obsession post">
+            <p class="img-caption">An example of an Obsession post</p>
+          </div>
+          <div>
+            <img src="images/portfolio%20assets/Profile%20image.png" alt="Your profile as it looks to other users">
+            <p class="img-caption">Your profile as it looks to other users</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <span class="cs-section-num">04 &mdash;&mdash; Outcome</span>
+        <h2 class="cs-section-h2">What this proved</h2>
+
+        <div class="outcome-block">
+          <p class="outcome-highlight">The moment that mattered most in testing</p>
+          <p class="cs-body">Telling testers: this is all built from information you've already given the app. No new data, no new permissions, just a UI that finally surfaces what Last.fm has always known.</p>
+          <p class="cs-body mb-0">In presenting testers with a new product, I didn't have to make a hard sell on suggesting to use this over anything else. It didn't feel like a new product being imposed on them. It felt like something that should have always existed. That's the thing I'm most proud of.</p>
+        </div>
+      </section>
+
+      <nav class="cs-pagination">
+        <a href="harlans.html" class="cs-pag-link cs-pag-link--prev">
+          <span class="cs-pag-label">← Previous</span>
+          <span class="cs-pag-title">Harlan's Gardens</span>
+        </a>
+        <a href="beacon.html" class="cs-pag-link cs-pag-link--next">
+          <span class="cs-pag-label">Next →</span>
+          <span class="cs-pag-title">Beacon Air</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-name">Jay Papandreas</span>
+        <span class="footer-meta">Denver, CO · 2026</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a data-e="jay.papandreas" data-d="gmail.com" class="footer-link" role="link" tabindex="0">Email</a>
+        <a href="https://www.linkedin.com/in/jaypapandreas" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="LinkedIn (opens in new tab)">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

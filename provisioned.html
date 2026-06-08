@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Provisioned — Jay Papandreas</title>
+  <meta name="description" content="A recipe app that starts with your fridge, not a grocery list, designed to reduce food waste and get people actually cooking.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .cs-hero { background: #2c1f0e; color: #faf6ef; }
+    .cs-label { color: #e8a44a; }
+    .cs-title, .cs-subtitle { color: #faf6ef; }
+    .cs-divider { background: rgba(250,246,239,0.1); }
+    .meta-label { color: #e8a44a; }
+    .meta-value { color: rgba(250,246,239,0.88); }
+    .tldr { background: rgba(250,246,239,0.06); }
+    .tldr-item { background: rgba(250,246,239,0.04); }
+    .tldr-label { color: #e8a44a; }
+    .tldr-body { color: rgba(250,246,239,0.85); }
+    .cs-screen-caption { color: rgba(250,246,239,0.7); }
+    .meta-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    /* Content area */
+    .pg-provisioned .cs-content { background: #fffdf9; }
+    .pg-provisioned .cs-section-num { color: #c4622d; }
+    .pg-provisioned .callout-block { background: #f2ebe0; border-left: 4px solid #c4622d; }
+    .pg-provisioned .callout-label { color: #c4622d; }
+    .pg-provisioned .callout-text { color: #5c3d1e; }
+    .pg-provisioned .stats-grid { background: rgba(30,20,9,0.06); border: none; gap: 2px; }
+    .pg-provisioned .stat-card { background: #f2ebe0; border: none; border-top: 3px solid #c4622d; }
+    .pg-provisioned .stat-number { color: #c4622d; }
+    .pg-provisioned .stat-label { color: #2c1f0e; }
+    .pg-provisioned .feature-badge { background: #2c1f0e; color: #faf6ef; border-color: #2c1f0e; }
+    .pg-provisioned .pivot-grid { background: rgba(30,20,9,0.06); border: none; gap: 2px; }
+    .pg-provisioned .pivot-card { background: #f2ebe0; border: none; border-top: 3px solid #8a7560; position: relative; }
+    .pg-provisioned .pivot-card:last-child { border-top-color: #6b7c5c; }
+    .pg-provisioned .pivot-label { color: #8a7560; }
+    .pg-provisioned .pivot-card:last-child .pivot-label { color: #6b7c5c; }
+    .pg-provisioned .tier-grid { background: rgba(30,20,9,0.06); border: none; gap: 2px; }
+    .pg-provisioned .tier-card { background: #f2ebe0; border: none; border-top: 3px solid #6b7c5c; }
+    .pg-provisioned .tier-card:nth-child(2) { border-top-color: #e8a44a; }
+    .pg-provisioned .tier-card:nth-child(3) { border-top-color: #c4622d; }
+    .pg-provisioned .tier-label:nth-child(1) { color: #6b7c5c; }
+    .pg-provisioned .tier-name { color: #2c1f0e; }
+    .pg-provisioned .tier-desc { color: #5c3d1e; }
+    .pg-provisioned .test-grid { background: rgba(30,20,9,0.06); gap: 2px; }
+    .pg-provisioned .test-card { background: #f2ebe0; border: none; border-top: 3px solid #8a7560; }
+    .pg-provisioned .test-label { color: #8a7560; }
+    .pg-provisioned .outcome-block { background: #2c1f0e; border: none; color: #faf6ef; }
+    .pg-provisioned .outcome-highlight { color: #e8a44a; }
+    .pg-provisioned .outcome-block .cs-body { color: rgba(250,246,239,0.85); }
+    .pg-provisioned .outcome-block .callout-block { background: rgba(250,246,239,0.08); border-left-color: #e8a44a; }
+    .pg-provisioned .outcome-block .callout-quote { color: #faf6ef; }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-wordmark">Jay Papandreas</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pg-provisioned" id="main">
+    <div class="cs-hero">
+      <div class="cs-hero-inner">
+        <span class="cs-label">Case Study</span>
+        <h1 class="cs-title">Provisioned: Cook what you have. Love what you make.</h1>
+        <p class="cs-subtitle">A recipe app that starts with your fridge, not a grocery list, designed to reduce food waste and get people actually cooking.</p>
+        <div class="cs-divider"></div>
+        <div class="meta-row">
+          <div class="meta-item">
+            <span class="meta-label">Project Type</span>
+            <span class="meta-value">Designlab Capstone</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">My Role</span>
+            <span class="meta-value">End-to-end UX &amp; UI Design</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Research</span>
+            <span class="meta-value">Survey · Interviews · Competitive Analysis</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Testing</span>
+            <span class="meta-value">2 rounds · 10 testers total</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Tools</span>
+            <span class="meta-value">Figma, Adobe Creative Suite</span>
+          </div>
+        </div>
+        <div class="tldr">
+          <div class="tldr-item">
+            <span class="tldr-label">Problem</span>
+            <p class="tldr-body">Kitchen management apps demand a huge initial lift — logging every item, every expiration date — and then do nothing useful with the data. No next step. No recipe suggestion.</p>
+          </div>
+          <div class="tldr-item">
+            <span class="tldr-label">Approach</span>
+            <p class="tldr-body">Flipped the model: start with a pre-populated pantry list users can edit in 15 seconds, then lead with recipes. Not kitchen management — a recipe app powered by what's already in your fridge.</p>
+          </div>
+          <div class="tldr-item">
+            <span class="tldr-label">Outcome</span>
+            <p class="tldr-body">Round 2 testers didn't just say they'd use it — they wanted it to exist. One of the strongest positive responses across all three Designlab projects.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-hero-wide">
+        <img src="images/portfolio%20assets/provisioned-hero.png" alt="Provisioned app screens">
+      </div>
+    </div>
+
+    <div class="cs-content">
+      <section class="cs-section">
+        <span class="cs-section-num">01 &mdash;&mdash; Brief &amp; Research</span>
+        <h2 class="cs-section-h2">The idea came from leaving my desk</h2>
+        <p class="cs-body">Provisioned started as a Designlab UX Academy capstone with a fully open brief. I was stumped, so I decided to go get groceries to clear my head. Somewhere between the door and the store, I had the idea.</p>
+        <p class="cs-body">Originally it was a kitchen management app: log your food, track what you're out of, build a grocery list. Through research, the scope shifted. The real opportunity wasn't organization, it was the moment after organization. What do I actually cook with what I have?</p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">16</span>
+            <span class="stat-label">Survey Respondents</span>
+            <p class="stat-desc">Current home cooks — habits, frustrations, grocery patterns.</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">5</span>
+            <span class="stat-label">In-Depth Interviews</span>
+            <p class="stat-desc">How people decide what to cook and when they turn to the internet for recipes.</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">~4</span>
+            <span class="stat-label">Competitors Analyzed</span>
+            <p class="stat-desc">Kitchen management apps that required full inventory setup and delivered no meaningful next step.</p>
+          </div>
+        </div>
+
+        <div class="callout-block">
+          <span class="callout-label">The Insight That Changed Everything</span>
+          <p class="callout-text">Almost everyone surveyed said they look at recipes on the internet daily, even when they have no intention of cooking. People love recipes. The app needed to be built around that behavior, not around inventory management.</p>
+        </div>
+
+        <div class="callout-block">
+          <span class="callout-label">The Competitor Problem</span>
+          <p class="callout-text">Every kitchen management app required users to start from an empty fridge, logging everything at once, including expiration dates. That's a massive ask. And after all that work, the payoff was a list. No recipe. No suggestion. No reason to come back.</p>
+        </div>
+
+        <div class="img-two-col">
+          <div>
+            <img src="images/portfolio%20assets/Competitor%20screen%20photo.png" alt="A competitor's screen">
+            <p class="img-caption">A competitor's screen, which needs a full manual search</p>
+          </div>
+          <div>
+            <img src="images/portfolio%20assets/Provisioned%20onboarding%20photo.png" alt="Easily adding foods on Provisioned">
+            <p class="img-caption">Easily adding foods on Provisioned</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <span class="cs-section-num">02 &mdash;&mdash; The Pivot &amp; Design</span>
+        <h2 class="cs-section-h2">From kitchen management to recipe-first</h2>
+        <p class="cs-body">Round 1 testing was almost too smooth. Users figured out the app, walked through it without friction, and when asked if they'd use it, said "Maybe. It's a good idea." Nobody was eager to convert off their Notes app. That lukewarm response was the signal. I went back to my interview notes and found the answer already written down.</p>
+
+        <div class="pivot-grid">
+          <div class="pivot-card">
+            <span class="pivot-label">Round 1 — Kitchen Management App</span>
+            <p class="pivot-desc">Menu-based navigation between kitchen, recipes, and grocery list. Functional but flat. Users understood it but didn't want it. No emotional hook.</p>
+          </div>
+          <div class="pivot-card">
+            <span class="pivot-label">Round 2 — Recipe-First App</span>
+            <p class="pivot-desc">Homepage rebuilt around food photography and recipe suggestions. Kitchen and grocery list became supporting features, not the headline. Users wanted it to exist.</p>
+          </div>
+        </div>
+
+        <div class="img-two-col">
+          <div>
+            <img src="images/portfolio%20assets/mid-fidelity.png" alt="Mid-fidelity wireframe">
+            <p class="img-caption">From a main menu with sections...</p>
+          </div>
+          <div>
+            <img src="images/portfolio%20assets/provisioned%20High%20fidelity%20wireframe.png" alt="High-fidelity wireframe">
+            <p class="img-caption">To a recipe-focused app based on user feedback</p>
+          </div>
+        </div>
+
+        <p class="cs-body">The other major design decision was onboarding. Competitors made users start from an empty fridge. My mentor asked if I could suggest the starting inventory instead. That evolved into, "What if everything was pre-selected and users just removed what they didn't have?" Setup now takes about 15 seconds.</p>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="feature-badge">01</span>
+            <div class="feature-content">
+              <span class="feature-name">Pre-populated pantry onboarding</span>
+              <p class="feature-desc">Common western kitchen staples pre-selected. Users remove what they don't have, add what's missing, and set dietary restrictions. 15 seconds. Done.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-badge">02</span>
+            <div class="feature-content">
+              <span class="feature-name">Recipe-forward homepage</span>
+              <p class="feature-desc">Full-bleed food photography, not text lists. The app leads with what people already love doing — browsing recipes — and grounds it in what's actually in their kitchen.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-badge">03</span>
+            <div class="feature-content">
+              <span class="feature-name">Recipe mode</span>
+              <p class="feature-desc">Screen stays on while cooking. If a user is missing a garnish or minor ingredient, the app asks if they want to skip it rather than blocking them from the recipe entirely.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-badge">04</span>
+            <div class="feature-content">
+              <span class="feature-name">Next-day feedback</span>
+              <p class="feature-desc">A photo of last night's recipe appears the next morning with a star rating and suggested improvement tags. One tap. Recorded. Used to improve recipes across the platform over time.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="img-two-col">
+          <div>
+            <img src="images/portfolio%20assets/Recipe%20photo.png" alt="An example recipe with feedback">
+            <p class="img-caption">An example recipe with feedback</p>
+          </div>
+          <div>
+            <img src="images/portfolio%20assets/Grocery%20photo.png" alt="Your grocery list">
+            <p class="img-caption">Your grocery list</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <span class="cs-section-num">03 &mdash;&mdash; The Recipe System</span>
+        <h2 class="cs-section-h2">Three tiers. One honest picture of your kitchen.</h2>
+        <p class="cs-body">The recipe suggestion structure came from how I actually cook: substituting ingredients based on mood, planning ahead around what I know I'll buy. Recipes are surfaced in three tiers based on what's in your kitchen right now.</p>
+
+        <div class="tier-grid">
+          <div class="tier-card">
+            <span class="tier-label">Cook Tonight</span>
+            <p class="tier-name">Everything you need, right now</p>
+            <p class="tier-desc">Recipes you can make with exactly what's in your kitchen. No exceptions, no substitutions required.</p>
+          </div>
+          <div class="tier-card">
+            <span class="tier-label">Almost There</span>
+            <p class="tier-name">Missing one or two things</p>
+            <p class="tier-desc">Recipes within reach. Missing ingredients can be added to your grocery list with one tap or skipped if they're optional.</p>
+          </div>
+          <div class="tier-card">
+            <span class="tier-label">Plan Ahead</span>
+            <p class="tier-name">Worth shopping for</p>
+            <p class="tier-desc">Recipes further out that match your taste. Save them, add missing ingredients to your list, and come back when you're ready.</p>
+          </div>
+        </div>
+
+        <p class="cs-body">The system is strict about what it shows. If you don't have tuna or egg noodles, you won't see tuna noodle casserole. If you're out of eggs and have ground beef, you might see meatloaf in the "plan ahead" tier, a nudge to grab eggs on your next run.</p>
+
+        <div class="img-two-col">
+          <div>
+            <img src="images/portfolio%20assets/Recipe%20feed%20photo.png" alt="Recipes based on what exists in your pantry">
+            <p class="img-caption">Recipes based on what exists in your pantry</p>
+          </div>
+          <div>
+            <img src="images/portfolio%20assets/Ingredients%20recipe%20photo.png" alt="A recipe with a few ingredients you don't have">
+            <p class="img-caption">A recipe with a few ingredients you don't have</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <span class="cs-section-num">04 &mdash;&mdash; Testing &amp; Outcome</span>
+        <h2 class="cs-section-h2">Two rounds. One pivot. Users who wanted it to exist.</h2>
+
+        <div class="test-grid">
+          <div class="test-card">
+            <span class="test-label">Round 1 — Mid-Fidelity · 5 Testers</span>
+            <p class="test-desc">App was usable and logical. Users had no criticism and that was the problem. "Maybe I'd use it" isn't a product people love. Went back to interview notes and rebuilt around recipe discovery.</p>
+          </div>
+          <div class="test-card">
+            <span class="test-label">Round 2 — High-Fidelity · 5 New Testers</span>
+            <p class="test-desc">Significantly stronger response. Testers engaged with the recipe feed, understood the tiers, and asked for one addition: a custom feedback tag field alongside the suggested ones. Added in final revisions.</p>
+          </div>
+        </div>
+
+        <div class="outcome-block">
+          <p class="outcome-highlight">The thing I'm most proud of</p>
+          <p class="cs-body">The pivot happened because I went back to my own interview notes. Almost everyone had said they looked at recipes online every day. I'd written it down and moved on. When Round 1 fell flat, I went back and found the answer already sitting there.</p>
+          <p class="cs-body">Good research only works if you use it. The notes weren't just documentation, they were the brief for the second version of the product.</p>
+          <p class="cs-body mb-0">Round 2 also taught me something worth keeping: when users have no frame of reference for a product, they can't be critical. It's not a failure of testing, but it's a sign I've made something new and unexpected. That said, a new round of testing with previous testers might make an even bigger difference.</p>
+        </div>
+      </section>
+
+      <nav class="cs-pagination">
+        <a href="beacon.html" class="cs-pag-link cs-pag-link--prev">
+          <span class="cs-pag-label">← Previous</span>
+          <span class="cs-pag-title">Beacon Air</span>
+        </a>
+        <a href="harlans.html" class="cs-pag-link cs-pag-link--next">
+          <span class="cs-pag-label">Next →</span>
+          <span class="cs-pag-title">Harlan's Gardens</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-name">Jay Papandreas</span>
+        <span class="footer-meta">Denver, CO · 2026</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a data-e="jay.papandreas" data-d="gmail.com" class="footer-link" role="link" tabindex="0">Email</a>
+        <a href="https://www.linkedin.com/in/jaypapandreas" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="LinkedIn (opens in new tab)">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

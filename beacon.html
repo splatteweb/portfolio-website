@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beacon Air — Jay Papandreas</title>
+  <meta name="description" content="End-to-end mobile booking and check-in for a new low-cost airline, including a first-round failure, an honest pivot, and a design process that got better by listening.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .cs-hero { background: #0a1f44; color: #fff; }
+    .cs-label { color: #a8d4f5; }
+    .cs-divider { background: rgba(255,255,255,0.1); }
+    .meta-label { color: #a8d4f5; }
+    .meta-value { color: rgba(255,255,255,0.9); }
+    .tldr { background: rgba(255,255,255,0.06); }
+    .tldr-item { background: rgba(255,255,255,0.04); }
+    .tldr-label { color: #a8d4f5; }
+    .tldr-body { color: rgba(255,255,255,0.85); }
+    .cs-screen-caption { color: rgba(255,255,255,0.7); }
+    /* Content area */
+    .pg-beacon .cs-section-num { color: #1a4a8a; }
+    .pg-beacon .callout-block { background: #0a1f44; border-left: 4px solid #4a90d9; }
+    .pg-beacon .callout-label { color: #a8d4f5; }
+    .pg-beacon .callout-text { color: rgba(255,255,255,0.8); }
+    .pg-beacon .callout-block--failure { background: #fff8f8; border-left-color: #d94a4a; }
+    .pg-beacon .callout-block--failure .callout-label { color: #d94a4a; }
+    .pg-beacon .callout-block--failure .callout-text { color: #3a4a5c; }
+    .pg-beacon .callout-block--fix { background: #f4fbf6; border-left-color: #1a8a4a; }
+    .pg-beacon .callout-block--fix .callout-label { color: #1a8a4a; }
+    .pg-beacon .callout-block--fix .callout-text { color: #3a4a5c; }
+    .pg-beacon .insight-grid { grid-template-columns: repeat(4, 1fr); gap: 2px; background: #eef2f8; }
+    .pg-beacon .insight-card { background: #eef2f8; border: none; border-top: 3px solid #4a90d9; }
+    .pg-beacon .insight-name { color: #0a1f44; }
+    .pg-beacon .insight-desc { color: #0a1f44; }
+    .pg-beacon .pricing-demo { background: #eef2f8; border: none; }
+    .pg-beacon .pricing-demo-label { border-bottom-color: rgba(10,31,68,0.15); color: #0a1f44; }
+    .pg-beacon .flight-row { background: #ffffff; border-bottom-color: rgba(10,31,68,0.1); }
+    .pg-beacon .flight-info { color: #0a1f44; }
+    .pg-beacon .flight-price { color: #0a1f44; }
+    .pg-beacon .feature-badge { background: #0a1f44; color: #fff; border-color: #0a1f44; }
+    .pg-beacon .outcome-block { background: #0a1f44; border: none; color: #fff; }
+    .pg-beacon .outcome-highlight { color: #a8d4f5; }
+    .pg-beacon .outcome-block .cs-body { color: rgba(255,255,255,0.85); }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-wordmark">Jay Papandreas</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pg-beacon" id="main">
+    <div class="cs-hero">
+      <div class="cs-hero-inner">
+        <span class="cs-label">Case Study</span>
+        <h1 class="cs-title">Beacon Air: Redesigning the worst part of your vacation</h1>
+        <p class="cs-subtitle">End-to-end mobile booking and check-in for a new low-cost airline, including a first-round failure, an honest pivot, and a design process that got better by listening.</p>
+        <div class="cs-divider"></div>
+        <div class="meta-row">
+          <div class="meta-item">
+            <span class="meta-label">Project Type</span>
+            <span class="meta-value">Designlab Capstone</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Scope</span>
+            <span class="meta-value">Booking + Check-in Flow</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">My Role</span>
+            <span class="meta-value">End-to-end UX &amp; UI Design</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Testing</span>
+            <span class="meta-value">3 rounds · 15 testers total</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Tools</span>
+            <span class="meta-value">Figma, Adobe Creative Suite</span>
+          </div>
+        </div>
+        <div class="tldr">
+          <div class="tldr-item">
+            <span class="tldr-label">Problem</span>
+            <p class="tldr-body">Low-cost airline booking is notorious for information bloat, obscured layovers, and dark patterns. A new airline needed a mobile experience that felt trustworthy from the first tap.</p>
+          </div>
+          <div class="tldr-item">
+            <span class="tldr-label">Approach</span>
+            <p class="tldr-body">Three rounds of testing, with a documented failure and full redesign of the search experience based on user feedback. Every insight is grounded in what users actually did.</p>
+          </div>
+          <div class="tldr-item">
+            <span class="tldr-label">Outcome</span>
+            <p class="tldr-body">Round 3 testers moved through the booking flow without confusion, located target flights without assistance, and booked with no hesitation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-hero-wide">
+        <img src="images/portfolio%20assets/Beacon%20screens%20images.png" alt="Beacon Air screens">
+      </div>
+    </div>
+
+    <div class="cs-content">
+      <section class="cs-section">
+        <span class="cs-section-num">01 &mdash;&mdash; Brief &amp; Diagnosis</span>
+        <h2 class="cs-section-h2">What low-cost carriers get wrong, and what Beacon Air needed to fix</h2>
+        <p class="cs-body">Beacon Air was a Designlab UX Academy capstone. The brief: design an end-to-end mobile experience for a fictional new low-cost airline from scratch.</p>
+        <p class="cs-body">The client wanted deals prominently featured and to be there for customers "at their lowest point in the journey." When I asked users what that meant to them, the answers were delays, cancellations, lost luggage. These are things no product can fully fix. In those interviews, the product goal evolved: make sure the booking experience itself is never the low point.</p>
+
+        <div class="callout-block">
+          <span class="callout-label">Guiding Principle</span>
+          <p class="callout-text">If you can't fix the hard stuff, at least don't add to it.</p>
+        </div>
+
+        <div class="insight-grid">
+          <div class="insight-card">
+            <p class="insight-name">Information bloat</p>
+            <p class="insight-desc">Low-cost carrier results pages bury the flight in upsells and fine print.</p>
+          </div>
+          <div class="insight-card">
+            <p class="insight-name">Obscured layovers</p>
+            <p class="insight-desc">Connection times are styled to be easy to miss, and suddenly you've booked a connection you can't make.</p>
+          </div>
+          <div class="insight-card">
+            <p class="insight-name">Calendar friction</p>
+            <p class="insight-desc">Date-range pickers create unnecessary decision load. Confirmed by users before building.</p>
+          </div>
+          <div class="insight-card">
+            <p class="insight-name">Price opacity</p>
+            <p class="insight-desc">The cheapest flight is rarely the most visible. Users shouldn't have to hunt for it.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <span class="cs-section-num">02 &mdash;&mdash; The Design</span>
+        <h2 class="cs-section-h2">Key decisions in the flow</h2>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="feature-badge">01</span>
+            <div class="feature-content">
+              <span class="feature-name">Dates on separate lines</span>
+              <p class="feature-desc">Departure and return selected sequentially with no date-range calendar. Each decision gets its own space.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-badge">02</span>
+            <div class="feature-content">
+              <span class="feature-name">Metro airport expansion</span>
+              <p class="feature-desc">Typing "New York" surfaces LGA, JFK, EWR, and an "all metro airports" option. Users get cheaper alternatives without knowing every airport code.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-badge">03</span>
+            <div class="feature-content">
+              <span class="feature-name">Transparent pricing and connections</span>
+              <p class="feature-desc">Results sorted by lowest price. Layovers and short connections flagged with icons and plain-language labels — tradeoffs visible before you commit.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-badge">04</span>
+            <div class="feature-content">
+              <span class="feature-name">Check-in hub with in-browser notifications</span>
+              <p class="feature-desc">Gate changes, delays, arrival updates surfaced as browser notifications for travelers when and where they're actually useful.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-demo">
+          <p class="pricing-demo-label">Flight results — visual logic</p>
+          <div class="flight-row">
+            <div>
+              <p class="flight-info">DEN → JFK · 7:15 AM</p>
+              <p class="flight-detail">✓ Lowest price</p>
+            </div>
+            <span class="flight-price">$189</span>
+          </div>
+          <div class="flight-row">
+            <div>
+              <p class="flight-info">DEN → LGA · 9:40 AM</p>
+              <p class="flight-detail">⏱ 2hr layover · ORD</p>
+            </div>
+            <span class="flight-price">$214</span>
+          </div>
+          <div class="flight-row">
+            <div>
+              <p class="flight-info">DEN → EWR · 6:00 AM</p>
+              <p class="flight-detail">→ Short connection (42 min) · MDW</p>
+            </div>
+            <span class="flight-price">$197</span>
+          </div>
+        </div>
+
+        <div class="img-block">
+          <img src="images/portfolio%20assets/Beacon%20screens%202.png" alt="Designs in action">
+          <p class="img-caption">Designs in action</p>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <span class="cs-section-num">03 &mdash;&mdash; What Went Wrong &amp; How I Fixed It</span>
+        <h2 class="cs-section-h2">Round 2: a documented failure and an honest pivot</h2>
+        <p class="cs-body">To meet the client's deal-featuring requirement, I placed suggested destinations below the search bar on the flight search screen. It failed in testing immediately.</p>
+
+        <div class="img-two-col">
+          <div>
+            <img src="images/portfolio%20assets/Failure/failure%20screen%201%201.png" alt="Failed attempt to add ads">
+            <p class="img-caption">An attempt to add promotional fares to the search screen was a failure</p>
+          </div>
+          <div>
+            <img src="images/portfolio%20assets/Failure/fixed%20screens%201.png" alt="Screenshots of revisions">
+            <p class="img-caption">Revised screens for testing with no irrelevant info</p>
+          </div>
+        </div>
+        <div class="callout-block callout-block--failure">
+          <span class="callout-label">What happened</span>
+          <p class="callout-text">Every tester's eyes went to the suggestions instead of the search bar. Users couldn't locate the search bar at all. The label "Explore great deals on trips to:" wasn't read. Users assumed their destination would appear in the list without searching. Post-session: universal negative response. Confusing at best, annoying at worst.</p>
+        </div>
+        <div class="callout-block callout-block--fix">
+          <span class="callout-label">The fix</span>
+          <p class="callout-text">Replaced suggestions with recent searches and favorited destinations. The things that users actually want at that moment. Deals moved to the homepage, below the booking section but above check-in. Still visible. No longer in the way.</p>
+          <p class="callout-text mt-sm">The ads weren't the problem. The placement was.</p>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <span class="cs-section-num">04 &mdash;&mdash; Testing &amp; Outcome</span>
+        <h2 class="cs-section-h2">Three rounds. One pivot. A flow that works.</h2>
+
+        <div class="outcome-block">
+          <p class="outcome-highlight">The thing I'm most proud of</p>
+          <p class="cs-body">When Round 2 failed, I didn't defend the design or iterate around the edges. I went back to the brief, found a better solution for both the client and the user, and rebuilt.</p>
+          <p class="cs-body mb-0">Not taking feedback personally is a skill. This project is where I proved it to myself.</p>
+        </div>
+      </section>
+
+      <nav class="cs-pagination">
+        <a href="lastfm.html" class="cs-pag-link cs-pag-link--prev">
+          <span class="cs-pag-label">← Previous</span>
+          <span class="cs-pag-title">Last.fm</span>
+        </a>
+        <a href="provisioned.html" class="cs-pag-link cs-pag-link--next">
+          <span class="cs-pag-label">Next →</span>
+          <span class="cs-pag-title">Provisioned</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-name">Jay Papandreas</span>
+        <span class="footer-meta">Denver, CO · 2026</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a data-e="jay.papandreas" data-d="gmail.com" class="footer-link" role="link" tabindex="0">Email</a>
+        <a href="https://www.linkedin.com/in/jaypapandreas" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="LinkedIn (opens in new tab)">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

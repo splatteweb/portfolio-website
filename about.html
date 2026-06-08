@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Jay Papandreas</title>
+  <meta name="description" content="Jay Papandreas is a product designer in Denver, CO available for work nationwide.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-wordmark">Jay Papandreas</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="about-intro">
+      <img class="about-photo" src="images/portfolio%20assets/About-Photo.jpg" alt="Jay Papandreas">
+      <div class="about-text">
+        <h1 class="about-heading">About</h1>
+        <p class="about-bio">I'm a product designer in Denver, CO available for work nationwide. I'm driven by a love for considered design and a need to put that back out into the world. And sometimes I DJ.</p>
+        <p class="about-bio">I recently completed the Designlab UX Academy and have been building a freelance practice since. I'm actively looking for my first full-time product design role.</p>
+      </div>
+    </section>
+
+    <section class="currently-section">
+      <h2 class="section-label">Currently</h2>
+      <p class="currently-body">Right now, I'm working with <a href="https://ghostcanyonfest.com/" target="_blank" rel="noopener noreferrer" aria-label="Ghost Canyon Fest (opens in new tab)">Ghost Canyon Fest</a> to bridge their digital and real-life festival experiences, creating a better world for independent artists at <a href="https://www.two-worlds.biz/" target="_blank" rel="noopener noreferrer" aria-label="Two Worlds (opens in new tab)">Two Worlds</a>, and releasing records with <a href="https://www.instagram.com/power_goth" target="_blank" rel="noopener noreferrer" aria-label="Power Goth Recordings on Instagram (opens in new tab)">Power Goth Recordings</a>.</p>
+    </section>
+
+    <section class="skills-section">
+      <div>
+        <h2 class="skills-group-label">Skills</h2>
+        <ul class="skills-list">
+          <li class="skill-tag">Product Design</li>
+          <li class="skill-tag">UX/UI Design</li>
+          <li class="skill-tag">Event Design</li>
+          <li class="skill-tag">Product Design Consultation</li>
+          <li class="skill-tag">Graphic Design</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="skills-group-label">Tools</h2>
+        <ul class="skills-list">
+          <li class="skill-tag">Figma</li>
+          <li class="skill-tag">Claude Code</li>
+          <li class="skill-tag">Framer</li>
+          <li class="skill-tag">Adobe Creative Suite</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h2 class="contact-heading">Get in Touch</h2>
+      <form class="form" id="contact-form">
+        <p class="form-note"><span aria-hidden="true">*</span> Required fields</p>
+        <div class="form-honeypot" aria-hidden="true">
+          <label for="b_trap">Website</label>
+          <input type="text" id="b_trap" name="b_trap" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label class="form-label" for="name">Name <span aria-hidden="true" class="required-mark">*</span></label>
+            <input class="form-input" type="text" id="name" name="name" required aria-invalid="false" aria-describedby="name-error">
+            <span id="name-error" class="form-field-error" aria-live="polite"></span>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="subject">Subject <span aria-hidden="true" class="required-mark">*</span></label>
+            <input class="form-input" type="text" id="subject" name="subject" required aria-invalid="false" aria-describedby="subject-error">
+            <span id="subject-error" class="form-field-error" aria-live="polite"></span>
+          </div>
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="message">Message <span aria-hidden="true" class="required-mark">*</span></label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Your message..." required aria-invalid="false" aria-describedby="message-error"></textarea>
+          <span id="message-error" class="form-field-error" aria-live="polite"></span>
+        </div>
+        <button class="form-submit" type="submit">Send Message</button>
+        <p class="form-status" id="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-name">Jay Papandreas</span>
+        <span class="footer-meta">Denver, CO · 2026</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a data-e="jay.papandreas" data-d="gmail.com" class="footer-link" role="link" tabindex="0">Email</a>
+        <a href="https://www.linkedin.com/in/jaypapandreas" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="LinkedIn (opens in new tab)">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    (function () {
+      var ENDPOINT  = 'https://script.google.com/macros/s/AKfycbyfKPheOiVkLEQucxhgxAeVvsh5Z7ARnxC8Q-JM4-kcXCELR0Q1tVwL_xK7TecHJsloNA/exec';
+      var LOAD_TIME = Date.now();
+
+      var form   = document.getElementById('contact-form');
+      var btn    = form.querySelector('.form-submit');
+      var status = document.getElementById('form-status');
+
+      function validateField(input, errorId, message) {
+        var error = document.getElementById(errorId);
+        if (!input.value.trim()) {
+          input.setAttribute('aria-invalid', 'true');
+          error.textContent = message;
+          return false;
+        }
+        input.setAttribute('aria-invalid', 'false');
+        error.textContent = '';
+        return true;
+      }
+
+      function clearErrors() {
+        ['name', 'subject', 'message'].forEach(function (f) {
+          form.elements[f].setAttribute('aria-invalid', 'false');
+          document.getElementById(f + '-error').textContent = '';
+        });
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Honeypot filled — silent drop
+        if (form.elements.b_trap.value) return;
+        // Submitted too fast to be human
+        if (Date.now() - LOAD_TIME < 3000) return;
+
+        var valid = true;
+        valid = validateField(form.elements.name,    'name-error',    'Please enter your name.')    && valid;
+        valid = validateField(form.elements.subject, 'subject-error', 'Please enter a subject.')    && valid;
+        valid = validateField(form.elements.message, 'message-error', 'Please enter a message.')    && valid;
+        if (!valid) return;
+
+        btn.disabled    = true;
+        btn.textContent = 'Sending…';
+        status.textContent = '';
+        status.className   = 'form-status';
+
+        fetch(ENDPOINT, {
+          method: 'POST',
+          mode:   'no-cors',
+          body:   new URLSearchParams({
+            name:    form.elements.name.value,
+            subject: form.elements.subject.value,
+            message: form.elements.message.value,
+            website: form.elements.b_trap.value
+          })
+        })
+        .then(function () {
+          clearErrors();
+          status.textContent = "Message sent — I'll be in touch.";
+          status.className   = 'form-status form-status--success';
+          form.reset();
+        })
+        .catch(function () {
+          status.textContent = 'Something went wrong — try again shortly.';
+          status.className   = 'form-status form-status--error';
+        })
+        .finally(function () {
+          btn.disabled    = false;
+          btn.textContent = 'Send Message';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
